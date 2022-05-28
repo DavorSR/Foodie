@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,900;1,800&family=Open+Sans:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Merienda", cursive;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #8ec63f;
+}
+.main-nav_logo {
+  display: flex;
+  justify-content: center;
+}
+.main-nav_logo span {
+  display: none;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-size: clamp(1em, 1vw, 5rem);
+}
+.main-nav ul li {
+  cursor: pointer;
+  padding: 0 1vw;
+}
+.main-nav ul li a {
+  color: white;
+  text-transform: uppercase;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+#booking {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15vh;
+}
+#booking .text {
+  color: white;
+  width: 70%;
+}
+#booking .text_promo {
+  color: #8ec63f;
+}
+#booking .text_title {
+  font-size: clamp(1rem, 4vw, 5rem);
+}
+#booking .text_info {
+  font-size: clamp(0.8em, 1.5vw, 3.5rem);
+  padding-bottom: 4vh;
+  width: 60%;
+}
+#booking .btn_start {
+  width: 30%;
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  outline: none;
+  background: #8ec63f;
+  border: 2px solid #8ec63f;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 0.8rem;
+}
+#booking .btn_start:hover {
+  background-color: transparent;
+  color: #8ec63f;
+  border: 2px solid #8ec63f;
+  transition: 0.2s ease-in;
+}
+#booking .btn_menu {
+  width: 30%;
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+#booking .btn_menu:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  transition: 0.2s ease-in;
+}
+#booking .table {
+  width: 30%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem 0;
+}
+#booking .table_title {
+  color: white;
+  padding-bottom: 1rem;
+}
+#booking .table form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+#booking .table form input {
+  padding: 2vh 2vw;
+  margin: 1vh 0;
+  font-size: 1rem;
+  border-radius: 15px;
+  background: transparent;
+  color: white;
+  border: 1px solid grey;
+}
+#booking .table form select {
+  padding: 2vh 2vw;
+  margin: 1vh 0;
+  font-size: 1rem;
+  border-radius: 15px;
+  background: transparent;
+  color: white;
+  border: 1px solid grey;
+}
+#booking .table form select > option {
+  color: black;
+}
+#booking .table form .btn_submit {
+  width: 100%;
+  padding: 2vh 2vw;
+  border-radius: 15px;
+  outline: none;
+  margin: 0 auto;
+  background: #8ec63f;
+  border: 2px solid #8ec63f;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 0.8rem;
+}
+#booking .table form .btn_submit:hover {
+  background-color: transparent;
+  color: #8ec63f;
+  border: 2px solid #8ec63f;
+  transition: 0.2s ease-in;
+}
+
+/*# sourceMappingURL=main.css.map */

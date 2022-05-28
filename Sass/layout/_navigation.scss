@@ -1,0 +1,34 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: $mainGreen;
+
+    &_logo {
+        display: flex;
+        justify-content: center;
+
+        span {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        font-size: clamp(1em, 1vw, 5rem);
+
+        li {
+            cursor: pointer;
+            padding: 0 1vw;
+
+            a {
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
