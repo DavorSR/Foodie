@@ -6,14 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Foodie</title>
 </head>
 
 <body>
 
     <header>
+        <div class="working-time">
+            <div class="working-time_time">
+                <i class="fa fa-clock-o" style="font-size:24px"></i>&nbsp; <p>Working hours: Mon - Sat 8.00 - 18.00</p>
+                &nbsp; &nbsp;
+                <i class="fa fa-mobile-phone" style="font-size:24px"></i> &nbsp;<p>Call Us:(+1) 555 234-8765</p>
+            </div>
+            <div class="working-time_social">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+        </div>
+        <!-- Navigation -->
         <nav class="main-nav">
-            <div class="main-nav_logo"><embed src="/Assets/Images/logo.svg" type=""><span>Foodie</span></div>
+            <div class="main-nav_logo"><embed src="/Assets/Images/logo-horizontal-white-green.png"
+                    type=""><span>Foodie</span></div>
 
             <ul>
                 <li><a class="active" href="#">Home</a></li>
@@ -24,92 +39,214 @@
                 <li><a href="#">Shop</a></li>
             </ul>
         </nav>
-
-        <main>
-            <section id="booking">
-
-                <div class="text">
-                    <span class="text_promo">
-                        Delicious Taverna
-                    </span>
-                    <h1 class="text_title">
-                        Go Green
-                    </h1>
-                    <p class="text_info">Fresh, organic ingredients. Carefully prepared.
-                        Eat green for a reason.</p>
-
-                    <div class="text_btn">
-                        <button class="btn_start">Get Started</button>
-                        <button class="btn_menu">Our Menu</button>
-                    </div>
-
-                </div>
-
-                <div class="table">
-                    <h2 class="table_title">Book a table</h2>
-                    <form action="" method="get">
-                        <input type="date" name="date" id="">
-                        <select>
-                            <option value="6:00am">6:00 am</option>
-                            <option value="6:30am">6:30 am</option>
-                            <option value="7:00am">7:00 am</option>
-                            <option value="7:30am">7:30 am</option>
-                            <option value="8:00am">8:00 am</option>
-                            <option value="8:30am">8:30 am</option>
-                            <option value="9:00am">9:00 am</option>
-                            <option value="9:30am">9:30 am</option>
-                            <option value="10:00am">10:00 am</option>
-                            <option value="10:30am">10:30 am</option>
-                            <option value="11:00am">11:00 am</option>
-                            <option value="11:30am">11:30 am</option>
-                            <option value="12:00pm">12:00 pm</option>
-                            <option value="12:30pm">12:30 pm</option>
-                            <option value="1:00pm">1:00 pm</option>
-                            <option value="1:30pm">1:30 pm</option>
-                            <option value="2:00pm">2:00 pm</option>
-                            <option value="2:30pm">2:30 pm</option>
-                            <option value="3:00pm">3:00 pm</option>
-                            <option value="3:30pm">3:30 pm</option>
-                            <option value="4:00pm">4:00 pm</option>
-                            <option value="4:30pm">4:30 pm</option>
-                            <option value="5:00pm">5:00 pm</option>
-                            <option value="5:30pm">5:30 pm</option>
-                            <option value="6:00pm">6:00 pm</option>
-                            <option value="6:30pm">6:30 pm</option>
-                            <option value="7:00pm" selected="selected">7:00 pm</option>
-                            <option value="7:30pm">7:30 pm</option>
-                            <option value="8:00pm">8:00 pm</option>
-                            <option value="8:30pm">8:30 pm</option>
-                            <option value="9:00pm">9:00 pm</option>
-                            <option value="9:30pm">9:30 pm</option>
-                            <option value="10:00pm">10:00 pm</option>
-                            <option value="10:30pm">10:30 pm</option>
-                            <option value="11:00pm">11:00 pm</option>
-                            <option value="11:30pm">11:30 pm</option>
-                        </select>
-
-                        <select name="select" id="">
-                            <option value="1">1 Person</option>
-                            <option value="2" selected="selected">2 People</option>
-                            <option value="3">3 People</option>
-                            <option value="4">4 People</option>
-                            <option value="5">5 People</option>
-                            <option value="6">6 People</option>
-                            <option value="7">7 People</option>
-                            <option value="8">8 People</option>
-                            <option value="9">9 People</option>
-                            <option value="10">10 People</option>
-                        </select>
-
-                        <input class="btn_submit" type="submit" value="Find a table">
-                    </form>
-                </div>
-
-
-
-            </section>
-        </main>
     </header>
+
+    <main>
+        <!-- Booking section with slogan and title -->
+        <section id="booking">
+
+            <div class="text">
+                <span class="text_promo">
+                    Delicious Taverna
+                </span>
+                <h1 class="text_title">
+                    <span>Go </span>Green
+                </h1>
+                <p class="text_info">Fresh, organic ingredients. Carefully prepared.
+                    Eat green for a reason.</p>
+
+                <div class="text_btn">
+                    <button class="btn_start">Get Started</button>
+                    <button class="btn_menu">Our Menu</button>
+                </div>
+
+            </div>
+            <!-- Select form for reservations -->
+            <div class="table">
+                <h2 class="table_title">Book a table</h2>
+                <form action="" method="get">
+                    <input type="date" name="date" value="2022-05-28">
+                    <select>
+                        <option value="6:00am">6:00 am</option>
+                        <option value="6:30am">6:30 am</option>
+                        <option value="7:00am">7:00 am</option>
+                        <option value="7:30am">7:30 am</option>
+                        <option value="8:00am">8:00 am</option>
+                        <option value="8:30am">8:30 am</option>
+                        <option value="9:00am">9:00 am</option>
+                        <option value="9:30am">9:30 am</option>
+                        <option value="10:00am">10:00 am</option>
+                        <option value="10:30am">10:30 am</option>
+                        <option value="11:00am">11:00 am</option>
+                        <option value="11:30am">11:30 am</option>
+                        <option value="12:00pm">12:00 pm</option>
+                        <option value="12:30pm">12:30 pm</option>
+                        <option value="1:00pm">1:00 pm</option>
+                        <option value="1:30pm">1:30 pm</option>
+                        <option value="2:00pm">2:00 pm</option>
+                        <option value="2:30pm">2:30 pm</option>
+                        <option value="3:00pm">3:00 pm</option>
+                        <option value="3:30pm">3:30 pm</option>
+                        <option value="4:00pm">4:00 pm</option>
+                        <option value="4:30pm">4:30 pm</option>
+                        <option value="5:00pm">5:00 pm</option>
+                        <option value="5:30pm">5:30 pm</option>
+                        <option value="6:00pm">6:00 pm</option>
+                        <option value="6:30pm">6:30 pm</option>
+                        <option value="7:00pm" selected="selected">7:00 pm</option>
+                        <option value="7:30pm">7:30 pm</option>
+                        <option value="8:00pm">8:00 pm</option>
+                        <option value="8:30pm">8:30 pm</option>
+                        <option value="9:00pm">9:00 pm</option>
+                        <option value="9:30pm">9:30 pm</option>
+                        <option value="10:00pm">10:00 pm</option>
+                        <option value="10:30pm">10:30 pm</option>
+                        <option value="11:00pm">11:00 pm</option>
+                        <option value="11:30pm">11:30 pm</option>
+                    </select>
+
+                    <select name="select" id="">
+                        <option value="1">1 Person</option>
+                        <option value="2" selected="selected">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7">7 People</option>
+                        <option value="8">8 People</option>
+                        <option value="9">9 People</option>
+                        <option value="10">10 People</option>
+                    </select>
+
+                    <input class="btn_submit" type="submit" value="Find a table">
+                </form>
+            </div>
+
+
+        </section>
+
+        <!-- Today's special offer -->
+
+        <section class="special">
+            <div class="special_info">
+                <p><span>TODAY’S SPECIAL:</span> Dinner for two at our exclusive location. Drinks are on the house.
+                </p>
+                <a class="fullMenu" href="#">Full menu</a>
+            </div>
+
+        </section>
+
+        <!-- Largest section with all info about delivery, food options and promotions -->
+
+        <section id="delivery">
+            <div class="delivery-wrrap">
+                <div class="image"><img src="../Assets/Images/box_transparent_organic_1.jpg" alt=""></div>
+                <div class="delivery-offer">
+                    <span class="delivery-offer_promo">
+                        We Offer
+                    </span>
+                    <h1 class="delivery-offer_title">
+                        <span>Free</span> Delivery
+                    </h1>
+                    <p class="delivery-offer_text">
+                        Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach
+                        fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn
+                        nuts salsify bunya pie sprout coriander water.
+                    </p>
+
+                    <input type="button" class="delivery-offer_btn" value="ORDER NOW: 0800-555-1234">
+
+                </div>
+            </div>
+            <!-- Part about our values and location -->
+            <div class="food-wrraper">
+                <div class="food-wrraper_box">
+                    <img src="/Assets/Images/location.png" alt="">
+                    <div class="food-wrraper_box-text">
+                        <h4 class="title">Great Location</h4>
+                        <p class="info">Turnip greens yarrow ricebean rutabaga</p>
+                    </div>
+                </div>
+                <div class="food-wrraper_box">
+                    <img src="/Assets/Images/homemade.png" alt="">
+                    <div class="food-wrraper_box-text">
+                        <h4 class="title">Homemade</h4>
+                        <p class="info">Water spinach arugula pea tatsoi aubergine</p>
+                    </div>
+                </div>
+                <div class="food-wrraper_box">
+                    <img src="/Assets/Images/kissclipart-certified-organic-png-clipart-organic-food-organic-6563d6b7e3d9eec2.png"
+                        alt="">
+                    <div class="food-wrraper_box-text">
+                        <h4 class="title">Nature first</h4>
+                        <p class="info">
+                            Credibly innovate granular internal</p>
+                    </div>
+                </div>
+                <div class="food-wrraper_box">
+                    <img src="/Assets/Images/carrot.png" alt="">
+                    <div class="food-wrraper_box-text">
+                        <h4 class="title">Healthy food</h4>
+                        <p class="info">Celery quandong swiss chard chicory
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Healthy options we offer from vegan to gluten free -->
+
+            <div class="pick">
+                <span class="pick_promo">TASTY & CRUNCHY</span>
+                <h2 class="pick_title">
+                    Choose & enjoy
+                </h2>
+                <p class="pick_moto">Inspired by recipes and creations of world’s best chefs
+                </p>
+            </div>
+
+            <div class="pick-options">
+
+                <!-- Content box structure for options (repeated) -->
+
+                <div class="pick-options_box">
+                    <img src="/Assets/Images/inner_vegan_plate_6.jpg" alt="" class="pick-options_box-img">
+                    <h4 class="pick-options_box-title">Gorgeous appetizers
+                    </h4>
+                    <p class="pick-options_box-text">Beetroot water spinach okra water chestnut ricebean pea.</p>
+                    <a href="" class="pick-options_box-link">View full menu</a>
+                </div>
+
+                <!-- end of content box -->
+
+                <div class="pick-options_box">
+                    <img src="/Assets/Images/inner_vegan_plate_5.jpg" alt="" class="pick-options_box-img">
+                    <h4 class="pick-options_box-title">Reinvented vegan meals
+                    </h4>
+                    <p class="pick-options_box-text">Water spinach arugula pea tatsoi aubergine spring onion.</p>
+                    <a href="" class="pick-options_box-link">Book your table</a>
+                </div>
+                <div class="pick-options_box">
+                    <img src="/Assets/Images/inner_vegan_plate_4.jpg" alt="" class="pick-options_box-img">
+                    <h4 class="pick-options_box-title">Beatifull pasta
+                    </h4>
+                    <p class="pick-options_box-text">Dandelion zucchini burdock yarrow chickpea dandelion.</p>
+                    <a href="" class="pick-options_box-link">Contact us</a>
+                </div>
+                <div class="pick-options_box">
+                    <img src="/Assets/Images/inner_vegan_plate_3.jpg" alt="" class="pick-options_box-img">
+                    <h4 class="pick-options_box-title">Gluten free meals
+                    </h4>
+                    <p class="pick-options_box-text">Chickweed okra pea winter purslane coriander yarrow.</p>
+                    <a href="" class="pick-options_box-link">More details</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
 
 </body>
 

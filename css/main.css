@@ -7,11 +7,42 @@
   font-family: "Merienda", cursive;
 }
 
+.working-time {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1vh 1vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+.working-time_time {
+  display: flex;
+}
+.working-time_social {
+  display: flex;
+}
+.working-time_social i {
+  padding: 1vh 1vw;
+  font-size: 20px;
+  cursor: pointer;
+}
+.working-time_social i:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  padding-left: 1vw;
   margin: 0 auto;
   background-color: #8ec63f;
 }
@@ -36,6 +67,9 @@
   color: white;
   text-transform: uppercase;
 }
+.main-nav ul li a:hover {
+  color: yellow;
+}
 
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
@@ -47,7 +81,10 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 15vh;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #booking .text {
   color: white;
@@ -55,9 +92,13 @@ header {
 }
 #booking .text_promo {
   color: #8ec63f;
+  font-size: clamp(0.8em, 2vw, 4rem);
 }
 #booking .text_title {
-  font-size: clamp(1rem, 4vw, 5rem);
+  font-size: clamp(1rem, 5vw, 5rem);
+}
+#booking .text_title span {
+  color: #8ec63f;
 }
 #booking .text_info {
   font-size: clamp(0.8em, 1.5vw, 3.5rem);
@@ -80,7 +121,11 @@ header {
   background-color: transparent;
   color: #8ec63f;
   border: 2px solid #8ec63f;
-  transition: 0.2s ease-in;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 #booking .btn_menu {
   width: 30%;
@@ -97,12 +142,16 @@ header {
   background-color: white;
   color: black;
   border: 2px solid white;
-  transition: 0.2s ease-in;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 #booking .table {
   width: 30%;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   padding: 2rem 0;
 }
 #booking .table_title {
@@ -153,7 +202,163 @@ header {
   background-color: transparent;
   color: #8ec63f;
   border: 2px solid #8ec63f;
-  transition: 0.2s ease-in;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.special {
+  padding: 5vh 2vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/background-pattern-dark.jpg") no-repeat center center/cover;
+  color: white;
+}
+.special_info {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+.special_info span {
+  color: red;
+}
+.special_info .fullMenu {
+  font-size: 1.2rem;
+  color: #8ec63f;
+  padding-bottom: 1vh;
+  border-bottom: 2px solid #8ec63f;
+}
+
+#delivery {
+  background-color: #fff;
+  padding-bottom: 15vh;
+}
+
+.delivery-wrrap {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10vh 2vw 0 2vw;
+  align-items: center;
+  margin: 0 auto;
+}
+.delivery-wrrap .image > img {
+  width: 40vw;
+}
+.delivery-wrrap .delivery-offer {
+  width: 40%;
+}
+.delivery-wrrap .delivery-offer_promo {
+  color: #8ec63f;
+  font-size: clamp(0.8em, 2vw, 4rem);
+}
+.delivery-wrrap .delivery-offer_title {
+  font-size: clamp(1rem, 5vw, 5rem);
+}
+.delivery-wrrap .delivery-offer_title span {
+  color: #8ec63f;
+}
+.delivery-wrrap .delivery-offer_text {
+  font-size: clamp(0.8em, 1.2vw, 3.5rem);
+  padding-bottom: 4vh;
+  width: 90%;
+}
+.delivery-wrrap .delivery-offer_btn {
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  outline: none;
+  background: #8ec63f;
+  border: 2px solid #8ec63f;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+}
+.delivery-wrrap .delivery-offer_btn:hover {
+  background-color: transparent;
+  color: #8ec63f;
+  border: 2px solid #8ec63f;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.food-wrraper {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  padding: 1rem;
+  -webkit-box-shadow: 6px 6px 5px -2px #b3b3b3;
+  box-shadow: 6px 6px 5px -2px #b3b3b3;
+}
+.food-wrraper_box {
+  display: flex;
+}
+.food-wrraper_box img {
+  width: 4vw;
+}
+.food-wrraper_box-text {
+  padding: 2vh 2vw;
+}
+.food-wrraper_box-text .title {
+  font-size: clamp(0.9rem, 1.3vw, 4rem);
+  padding-bottom: 1vh;
+  font-weight: bold;
+}
+.food-wrraper_box-text .info {
+  font-size: clamp(0.7rem, 1vw, 3rem);
+  color: gray;
+}
+
+.pick {
+  padding: 8vh 0;
+  text-align: center;
+}
+.pick_promo {
+  color: #8ec63f;
+  font-size: clamp(0.8em, 1.5vw, 4rem);
+}
+.pick_title {
+  font-size: clamp(1rem, 3vw, 5rem);
+}
+.pick_moto {
+  font-size: clamp(0.7em, 1.1vw, 3rem);
+  color: gray;
+}
+
+.pick-options {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.pick-options_box {
+  text-align: center;
+}
+.pick-options_box-img {
+  width: 18vw;
+}
+.pick-options_box-title {
+  font-size: clamp(0.7rem, 1.2vw, 3rem);
+  padding: 2vh 0;
+}
+.pick-options_box-text {
+  font-size: clamp(0.6rem, 1vw, 2rem);
+  color: gray;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 4vh;
+}
+.pick-options_box-link {
+  font-size: clamp(0.7em, 1.2vw, 3rem);
+  border-bottom: 3px solid lightgray;
+  color: #000;
+  text-transform: uppercase;
+}
+.pick-options_box-link:hover {
+  color: #8ec63f;
 }
 
 /*# sourceMappingURL=main.css.map */

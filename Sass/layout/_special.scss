@@ -1,0 +1,25 @@
+.special {
+    padding: 5vh 2vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/Images/background-pattern-dark.jpg") no-repeat center center/cover;    color: white;
+
+    &_info {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        font-size: 1.1rem;
+
+
+        span {
+            color: red;
+        }
+
+        .fullMenu {
+            font-size: 1.2rem;
+            color: $mainGreen;
+            padding-bottom: 1vh;
+            border-bottom: 2px solid $mainGreen;
+        }
+    }
+}
