@@ -1,0 +1,75 @@
+.gallery {
+    padding: 50px 0;
+    overflow: hidden;
+
+    &_img {
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100vw;
+        margin-top: 10px;
+        display: grid;
+ 
+        grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+        column-gap: 10px;
+        row-gap: 10px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: fill;
+            object-position: center;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                -webkit-filter: brightness(70%);
+                animation: move-down 0.3s linear;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
+    &_popup-img {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        background: rgba(0, 0, 0, 0.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 60px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5pxx solid #fff;
+            border-radius: 5px;
+            width: 80%;
+            height: 90%;
+            object-fit: contain;
+        }
+    }
+}
+
+.g-2{
+    grid-column: span 2;
+}
+.g-3{
+    grid-column: span 2;
+}
