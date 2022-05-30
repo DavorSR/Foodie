@@ -1,163 +1,175 @@
-.contact-wrraper{
-    background-color: #000;
+.contact-wrraper {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+  @include eXSmall {
+    flex-direction: column;
+  }
+  @include tablet {
+    // flex-direction: column;
+  }
+
+  &_info {
     display: flex;
-    justify-content: space-between;
-    color: #fff;
-
-    @include eXSmall{
-      flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 10vh;
+    @include eXSmall {
+      padding-bottom: 20px;
+    }
+    @include tablet {
+      padding-bottom: 20px;
     }
 
-    &_info{
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding-top: 10vh;
-        @include eXSmall{
-          padding-bottom: 20px;
-        }
-
-        &-call{
-            background-color: $mainGreen;
-            width: fit-content;
-            padding: 1vh 2vw;
-            text-align: center;
-            font-size: clamp(1rem, 1.2vw, 4rem);
-            @include eXSmall {
-              width: 100%;                                
-          }
-        }
-
-        &-phone{
-            margin: 2vh 0;
-            font-size: clamp(1.2rem, 1.5vw, 5rem);
-
-            a{
-                color: white;
-            }
-        }
-
-        &-time{
-                   
-        }
-
-        &-address{
-            margin: 2vh 0;
-        }
-
+    &-call {
+      background-color: $mainGreen;
+      width: fit-content;
+      padding: 1vh 2vw;
+      text-align: center;
+      font-size: clamp(1.4rem, 1.2vw, 4rem);
+      @include eXSmall {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
     }
 
+    &-phone {
+      margin: 2vh 0;
+      font-size: clamp(2rem, 1.5vw, 5rem);
+
+      a {
+        color: white;
+      }
+    }
+
+    &-time {
+      font-size: clamp(1.4rem, 1.5vw, 5rem);
+    }
+
+    &-address {
+      margin: 2vh 0;
+      font-size: clamp(2rem, 1.5vw, 5rem);
+    }
+  }
 }
 
 // Social icons and animations
 
 .social-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
-    &__button {
-      margin: 10px 5px 0;
-    }
+  &__button {
+    margin: 10px 5px 0;
   }
-  
-  $social-button-size: 40px;
-  $social-button-icon-size: 0.4;
-  $social-button-background: #fff;
-  $social-button-active-color: #fff;
-  $social-button-transition-time: 0.3s;
-  
-  $social-button-colors: (
-    
-    'facebook': #3b5999,
-    'twitter': #55acee,
-    'instagram': #e4405f,
-    'snapchat': #eec900,
+}
 
+$social-button-size: 40px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
 
-  );
-  
-  .social-button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    width: $social-button-size;
-    height: $social-button-size;
-    text-decoration: none;
+$social-button-colors: (
+  "facebook": #3b5999,
+  "twitter": #55acee,
+  "instagram": #e4405f,
+  "snapchat": #eec900,
+);
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: $social-button-size;
+  height: $social-button-size;
+  text-decoration: none;
+  border-radius: 100%;
+  background: $social-button-background;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
     border-radius: 100%;
-    background: $social-button-background;
-    text-align: center;
-  
+    transition: $social-button-transition-time;
+  }
+
+  &:focus,
+  &:hover {
+    color: $social-button-active-color;
+
     &::after {
-      content: '';
-      position: absolute;
-      top: -1px;
-      left: 50%;
-      display: block;
-      width: 0;
-      height: 0;
-      border-radius: 100%;
-      transition: $social-button-transition-time;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      margin-left: calc(-50% - 1px);
     }
-  
-    &:focus,
-    &:hover {
-      color: $social-button-active-color;
-  
+  }
+
+  i,
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: $social-button-transition-time;
+  }
+
+  i {
+    font-size: $social-button-size * $social-button-icon-size;
+  }
+
+  svg {
+    height: percentage($social-button-icon-size);
+    width: percentage($social-button-icon-size);
+  }
+
+  @each $name, $color in $social-button-colors {
+    &--#{$name} {
+      color: $color;
+
       &::after {
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        margin-left: calc(-50% - 1px);
-      }
-    }
-  
-    i,
-    svg {
-      position: relative;
-      z-index: 1;
-      transition: $social-button-transition-time;
-    }
-  
-    i {
-      font-size: $social-button-size * $social-button-icon-size;
-    }
-  
-    svg {
-      height: percentage($social-button-icon-size);
-      width: percentage($social-button-icon-size);
-    }
-  
-    @each $name, $color in $social-button-colors {
-      &--#{$name} {
-        color: $color;
-  
-        &::after {
-          background: $color;
-        }
+        background: $color;
       }
     }
   }
-  
+}
 
 // Map/location box
 
-
+.contact-wrraper_map {
+  width: 50%;
+  @include eXSmall {
+    width: 100% !important;
+  }
+  @include tablet {
+    width: 50%;
+    margin: auto 0;
+  }
+}
 
 // Footer
 
-footer{
-    background-color: $mainGreen;
-    padding: 3vh 0;
-    text-align: center;
+footer {
+  background-color: $mainGreen;
+  padding: 3vh 0;
+  text-align: center;
 
-    a{
-        color: black;
+  a {
+    color: black;
 
-        &:hover{
-            color: white;
-        }
+    &:hover {
+      color: white;
     }
+  }
 }

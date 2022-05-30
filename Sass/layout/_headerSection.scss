@@ -2,6 +2,9 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../Assets/Images/header.jpg") no-repeat center center/cover;
     height: 100vh;
+    @include tablet {
+        // height: 90vh;
+    }
 }
 
 #booking {
@@ -17,6 +20,13 @@ header {
         flex-direction: column;
         width: 100%;
     }
+    @include tablet {
+        flex-direction: column;
+        width: 100%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .text {
         color: white;
@@ -26,14 +36,21 @@ header {
             text-align: center;
             padding-bottom: 5vh;
         }
+        @include tablet {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 5vh;
+        }
 
         &_promo {
             color: $mainGreen;
-            font-size: clamp(1.1em, 2vw, 4rem);
+            font-size: clamp(1.6em, 2vw, 4rem);
+         
         }
 
         &_title {
-            font-size: clamp(2rem, 5vw, 5rem);
+            font-size: clamp(2.5rem, 5vw, 5rem);
+         
 
             span {
                 color: $mainGreen;
@@ -41,58 +58,71 @@ header {
         }
 
         &_info {
-            font-size: clamp(1em, 1.5vw, 3.5rem);
+            font-size: clamp(1.4em, 1.5vw, 3.5rem);
             padding-bottom: 4vh;
             width: 60%;
-            @include eXSmall{
+            @include eXSmall {
                 text-align: center;
                 width: 100%;
                 margin: 0 auto;
             }
+            @include tablet {
+                text-align: center;
+                width: 100%;
+                text-align: center;
+                padding-left: 20px;
+            }
         }
     }
 
-    .btn_start {
-        width: 30%;
-        padding: 2vh 2vw;
-        border-radius: 20px;
-        outline: none;
-        background: $mainGreen;
-        border: 2px solid #8ec63f;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: white;
-        font-size: 0.8rem;
-        @include eXSmall{
-            width: 40%;
-        }
+    .text_btn {
 
-        &:hover {
-            background-color: transparent;
-            color: $mainGreen;
+        margin: 0 auto;
+    
+
+
+        &-start {
+            width: 30%;
+            padding: 2vh 2vw;
+            border-radius: 20px;
+            outline: none;
+            background: $mainGreen;
             border: 2px solid #8ec63f;
-            @include transition;
-        }
-    }
-    .btn_menu {
-        width: 30%;
-        padding: 2vh 2vw;
-        border-radius: 20px;
-        color: white;
-        background-color: transparent;
-        border: 2px solid white;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.8rem;
-        @include eXSmall{
-            width: 40%;
-        }
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            font-size: 0.8rem;
+            @include eXSmall {
+                width: 40%;
+            }
 
-        &:hover {
-            background-color: white;
-            color: rgba(0, 0, 0);
+            &:hover {
+                background-color: transparent;
+                color: $mainGreen;
+                border: 2px solid #8ec63f;
+                @include transition;
+            }
+        }
+        &-menu {
+            width: 30%;
+            padding: 2vh 2vw;
+            border-radius: 20px;
+            color: white;
+            background-color: transparent;
             border: 2px solid white;
-            @include transition;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.8rem;
+            @include eXSmall {
+                width: 40%;
+            }
+
+            &:hover {
+                background-color: white;
+                color: rgba(0, 0, 0);
+                border: 2px solid white;
+                @include transition;
+            }
         }
     }
 
@@ -104,6 +134,11 @@ header {
         @include eXSmall {
             width: 100%;
             padding: 0;
+        }
+        @include tablet {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 1vh;
         }
 
         &_title {
@@ -117,7 +152,7 @@ header {
             width: 80%;
             margin: 0 auto;
             @include eXSmall {
-               padding-bottom: 20px;
+                padding-bottom: 20px;
             }
 
             input {

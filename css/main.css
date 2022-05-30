@@ -23,6 +23,12 @@
     font-size: 0.7rem;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .working-time {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
 .working-time_time {
   display: flex;
 }
@@ -58,6 +64,11 @@
   background-color: #8ec63f;
 }
 @media (max-width: 505px) {
+  .main-nav {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
   .main-nav {
     width: 100%;
   }
@@ -142,7 +153,6 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
   height: 100vh;
 }
-
 #booking {
   width: 80%;
   margin: 0 auto;
@@ -159,6 +169,15 @@ header {
     width: 100%;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  #booking {
+    flex-direction: column;
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 #booking .text {
   color: white;
   width: 70%;
@@ -170,18 +189,25 @@ header {
     padding-bottom: 5vh;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  #booking .text {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5vh;
+  }
+}
 #booking .text_promo {
   color: #8ec63f;
-  font-size: clamp(1.1em, 2vw, 4rem);
+  font-size: clamp(1.6em, 2vw, 4rem);
 }
 #booking .text_title {
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
 }
 #booking .text_title span {
   color: #8ec63f;
 }
 #booking .text_info {
-  font-size: clamp(1em, 1.5vw, 3.5rem);
+  font-size: clamp(1.4em, 1.5vw, 3.5rem);
   padding-bottom: 4vh;
   width: 60%;
 }
@@ -192,7 +218,18 @@ header {
     margin: 0 auto;
   }
 }
-#booking .btn_start {
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  #booking .text_info {
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+  }
+}
+#booking .text_btn {
+  margin: 0 auto;
+}
+#booking .text_btn-start {
   width: 30%;
   padding: 2vh 2vw;
   border-radius: 20px;
@@ -205,11 +242,11 @@ header {
   font-size: 0.8rem;
 }
 @media (max-width: 505px) {
-  #booking .btn_start {
+  #booking .text_btn-start {
     width: 40%;
   }
 }
-#booking .btn_start:hover {
+#booking .text_btn-start:hover {
   background-color: transparent;
   color: #8ec63f;
   border: 2px solid #8ec63f;
@@ -219,7 +256,7 @@ header {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-#booking .btn_menu {
+#booking .text_btn-menu {
   width: 30%;
   padding: 2vh 2vw;
   border-radius: 20px;
@@ -231,11 +268,11 @@ header {
   font-size: 0.8rem;
 }
 @media (max-width: 505px) {
-  #booking .btn_menu {
+  #booking .text_btn-menu {
     width: 40%;
   }
 }
-#booking .btn_menu:hover {
+#booking .text_btn-menu:hover {
   background-color: white;
   color: black;
   border: 2px solid white;
@@ -255,6 +292,13 @@ header {
   #booking .table {
     width: 100%;
     padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  #booking .table {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1vh;
   }
 }
 #booking .table_title {
@@ -455,6 +499,14 @@ header {
     box-shadow: 6px 6px 15px -2px #b3b3b3;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .food-wrraper {
+    flex-direction: column;
+    margin-top: 10px;
+    -webkit-box-shadow: 6px 6px 15px -2px #b3b3b3;
+    box-shadow: 6px 6px 15px -2px #b3b3b3;
+  }
+}
 .food-wrraper_box {
   display: flex;
 }
@@ -471,6 +523,11 @@ header {
     display: none;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .food-wrraper_box img {
+    width: 10vh;
+  }
+}
 .food-wrraper_box-text {
   padding: 2vh 2vw;
 }
@@ -484,9 +541,19 @@ header {
     margin: 16px 0;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .food-wrraper_box-text .title {
+    font-size: 2rem;
+  }
+}
 .food-wrraper_box-text .info {
   font-size: clamp(0.8rem, 1vw, 3rem);
   color: gray;
+}
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .food-wrraper_box-text .info {
+    font-size: 1.1rem;
+  }
 }
 
 .pick {
@@ -495,13 +562,13 @@ header {
 }
 .pick_promo {
   color: #8ec63f;
-  font-size: clamp(0.8em, 1.5vw, 4rem);
+  font-size: clamp(1.1em, 1.5vw, 4rem);
 }
 .pick_title {
-  font-size: clamp(1.4rem, 3vw, 5rem);
+  font-size: clamp(2.5rem, 3vw, 5rem);
 }
 .pick_moto {
-  font-size: clamp(0.8em, 1.1vw, 3rem);
+  font-size: clamp(1.4rem, 1.1vw, 3rem);
   color: gray;
 }
 
@@ -511,6 +578,11 @@ header {
   display: flex;
 }
 @media (max-width: 505px) {
+  .pick-options {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
   .pick-options {
     flex-direction: column;
   }
@@ -526,19 +598,29 @@ header {
     width: 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .pick-options_box-img {
+    width: 50%;
+  }
+}
 .pick-options_box-title {
   font-size: clamp(1.2rem, 1.2vw, 3rem);
   padding: 2vh 0;
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .pick-options_box-title {
+    font-size: 2rem;
+  }
+}
 .pick-options_box-text {
-  font-size: clamp(1rem, 1vw, 2rem);
+  font-size: clamp(1.4rem, 1vw, 2rem);
   color: gray;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 4vh;
 }
 .pick-options_box-link {
-  font-size: clamp(0.9em, 1.2vw, 3rem);
+  font-size: clamp(1.6em, 1.2vw, 3rem);
   border-bottom: 3px solid lightgray;
   color: #000;
   text-transform: uppercase;
@@ -656,6 +738,12 @@ header {
     padding: 0 2vh;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .menu-wrraper_box {
+    width: 100%;
+    padding: 0 2vh;
+  }
+}
 .menu-wrraper_box-top {
   display: flex;
   justify-content: space-between;
@@ -667,13 +755,14 @@ header {
   justify-self: flex-start;
 }
 .menu-wrraper_box-top-title {
-  font-size: clamp(0.7rem, 1.4vw, 3rem);
+  font-size: clamp(2rem, 1.4vw, 3rem);
 }
 .menu-wrraper_box-top-price {
+  font-size: clamp(1.5rem, 1.2vw, 2.6rem);
   font-weight: bold;
 }
 .menu-wrraper_box-info {
-  font-size: clamp(0.6rem, 1.1vw, 2rem);
+  font-size: clamp(1.4rem, 1.1vw, 2rem);
   color: gray;
   text-align: left;
   border-bottom: 1px solid gray;
@@ -702,27 +791,41 @@ header {
     padding-bottom: 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .contact-wrraper_info {
+    padding-bottom: 20px;
+  }
+}
 .contact-wrraper_info-call {
   background-color: #8ec63f;
   width: fit-content;
   padding: 1vh 2vw;
   text-align: center;
-  font-size: clamp(1rem, 1.2vw, 4rem);
+  font-size: clamp(1.4rem, 1.2vw, 4rem);
 }
 @media (max-width: 505px) {
   .contact-wrraper_info-call {
     width: 100%;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .contact-wrraper_info-call {
+    width: 100%;
+  }
+}
 .contact-wrraper_info-phone {
   margin: 2vh 0;
-  font-size: clamp(1.2rem, 1.5vw, 5rem);
+  font-size: clamp(2rem, 1.5vw, 5rem);
 }
 .contact-wrraper_info-phone a {
   color: white;
 }
+.contact-wrraper_info-time {
+  font-size: clamp(1.4rem, 1.5vw, 5rem);
+}
 .contact-wrraper_info-address {
   margin: 2vh 0;
+  font-size: clamp(2rem, 1.5vw, 5rem);
 }
 
 .social-buttons {
@@ -802,6 +905,21 @@ header {
 }
 .social-button--snapchat::after {
   background: #eec900;
+}
+
+.contact-wrraper_map {
+  width: 50%;
+}
+@media (max-width: 505px) {
+  .contact-wrraper_map {
+    width: 100% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
+  .contact-wrraper_map {
+    width: 50%;
+    margin: auto 0;
+  }
 }
 
 footer {

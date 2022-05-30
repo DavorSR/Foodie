@@ -91,6 +91,12 @@
         -webkit-box-shadow: 6px 6px 15px -2px #b3b3b3;
         box-shadow: 6px 6px 15px -2px #b3b3b3;
     }
+    @include tablet {
+        flex-direction: column;
+        margin-top: 10px;
+        -webkit-box-shadow: 6px 6px 15px -2px #b3b3b3;
+        box-shadow: 6px 6px 15px -2px #b3b3b3;
+    }
 
     &_box {
         display: flex;
@@ -102,6 +108,9 @@
             width: 4vw;
             @include eXSmall {
                 display: none;
+            }
+            @include tablet {
+               width: 10vh;
             }
         }
 
@@ -115,11 +124,17 @@
                 @include eXSmall {
                     margin: 16px 0;
                 }
+                @include tablet {
+                   font-size: 2rem;
+                }
             }
 
             .info {
                 font-size: clamp(0.8rem, 1vw, 3rem);
                 color: gray;
+                @include tablet {
+                    font-size: 1.1rem;
+                 }
             }
         }
     }
@@ -133,16 +148,18 @@
 
     &_promo {
         color: $mainGreen;
-        font-size: clamp(0.8em, 1.5vw, 4rem);
+        font-size: clamp(1.1em, 1.5vw, 4rem);
     }
 
     &_title {
-        font-size: clamp(1.4rem, 3vw, 5rem);
+        font-size: clamp(2.5rem, 3vw, 5rem);
+ 
     }
 
     &_moto {
-        font-size: clamp(0.8em, 1.1vw, 3rem);
+        font-size: clamp(1.4rem, 1.1vw, 3rem);
         color: gray;
+    
     }
 }
 
@@ -155,6 +172,9 @@
     @include eXSmall {
         flex-direction: column;
     }
+    @include tablet {
+        flex-direction: column;
+    }
 
     &_box {
         text-align: center;
@@ -164,26 +184,34 @@
             @include eXSmall {
                 width: 50%;                                
             }
+            @include tablet {
+                width: 50%;                                
+            }
         }
 
         &-title {
             font-size: clamp(1.2rem, 1.2vw, 3rem);
             padding: 2vh 0;
+            @include tablet {
+                font-size: 2rem;                                
+            }
         }
 
         &-text {
-            font-size: clamp(1rem, 1vw, 2rem);
+            font-size: clamp(1.4rem, 1vw, 2rem);
             color: gray;
             width: 80%;
             margin: 0 auto;
             padding-bottom: 4vh;
+       
         }
 
         &-link {
-            font-size: clamp(0.9em, 1.2vw, 3rem);
+            font-size: clamp(1.6em, 1.2vw, 3rem);
             border-bottom: 3px solid lightgray;
             color: #000;
             text-transform: uppercase;
+        
 
             &:hover {
                 color: $mainGreen;

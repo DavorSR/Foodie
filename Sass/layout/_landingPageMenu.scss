@@ -38,6 +38,10 @@
             width: 100%;                                
             padding: 0 2vh;
         }
+        @include tablet {
+            width: 100%;                                
+            padding: 0 2vh;
+        }
        
 
         &-top {
@@ -53,15 +57,16 @@
             }
 
             &-title {
-                font-size: clamp(0.7rem, 1.4vw, 3rem);
+                font-size: clamp(2rem, 1.4vw, 3rem);
             }
             &-price {
+                font-size: clamp(1.5rem, 1.2vw, 2.6rem);
                 font-weight: bold;
             }
         }
 
         &-info {
-            font-size: clamp(0.6rem, 1.1vw, 2rem);
+            font-size: clamp(1.4rem, 1.1vw, 2rem);
             color: gray;
             text-align: left;
             border-bottom: 1px solid gray;
