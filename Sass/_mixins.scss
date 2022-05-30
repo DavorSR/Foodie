@@ -5,3 +5,30 @@
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
+$md: 768px;
+$lg: 992px;
+$wide: 2160px;
+
+@mixin eXSmall {
+    @media (max-width: 505px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 506px) and (max-width: $md) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: $lg), (orientation: portrait) {
+        @content;
+    }
+}
+@mixin wide {
+    @media (min-width: $wide) {
+        @content;
+    }
+}

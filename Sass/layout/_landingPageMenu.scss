@@ -1,0 +1,72 @@
+
+
+.menu {
+    padding: 8vh 0;
+    text-align: center;
+
+    &_promo {
+        color: $mainGreen;
+        font-size: clamp(1em, 1.5vw, 4rem);
+    }
+
+    &_title {
+        font-size: clamp(1.4rem, 3vw, 5rem);
+    }
+
+    &_moto {
+        font-size: clamp(0.9em, 1.1vw, 3rem);
+        color: gray;
+    }
+}
+
+.menu-wrraper {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
+    @include eXSmall {
+        padding-bottom: 5vh;                                
+    }
+    
+
+    &_box {
+        margin: 10px;
+        text-align: center;
+        width: 45%;
+        @include eXSmall {
+            width: 100%;                                
+            padding: 0 2vh;
+        }
+       
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2vh;
+
+            embed{
+                width: 3vw;
+                justify-self: flex-start;
+
+            }
+
+            &-title {
+                font-size: clamp(0.7rem, 1.4vw, 3rem);
+            }
+            &-price {
+                font-weight: bold;
+            }
+        }
+
+        &-info {
+            font-size: clamp(0.6rem, 1.1vw, 2rem);
+            color: gray;
+            text-align: left;
+            border-bottom: 1px solid gray;
+            padding: 0 0 2vh 0;
+       
+        }
+    }
+}

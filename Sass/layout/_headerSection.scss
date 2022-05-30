@@ -13,18 +13,27 @@ header {
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include eXSmall {
+        flex-direction: column;
+        width: 100%;
+    }
 
     .text {
         color: white;
         width: 70%;
+        @include eXSmall {
+            width: 90%;
+            text-align: center;
+            padding-bottom: 5vh;
+        }
 
         &_promo {
             color: $mainGreen;
-            font-size: clamp(0.8em, 2vw, 4rem);
+            font-size: clamp(1.1em, 2vw, 4rem);
         }
 
         &_title {
-            font-size: clamp(1rem, 5vw, 5rem);
+            font-size: clamp(2rem, 5vw, 5rem);
 
             span {
                 color: $mainGreen;
@@ -32,9 +41,14 @@ header {
         }
 
         &_info {
-            font-size: clamp(0.8em, 1.5vw, 3.5rem);
+            font-size: clamp(1em, 1.5vw, 3.5rem);
             padding-bottom: 4vh;
             width: 60%;
+            @include eXSmall{
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -49,6 +63,9 @@ header {
         font-weight: bold;
         color: white;
         font-size: 0.8rem;
+        @include eXSmall{
+            width: 40%;
+        }
 
         &:hover {
             background-color: transparent;
@@ -67,6 +84,9 @@ header {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 0.8rem;
+        @include eXSmall{
+            width: 40%;
+        }
 
         &:hover {
             background-color: white;
@@ -81,6 +101,10 @@ header {
         text-align: center;
         background: rgba(0, 0, 0, 0.8);
         padding: 2rem 0;
+        @include eXSmall {
+            width: 100%;
+            padding: 0;
+        }
 
         &_title {
             color: white;
@@ -92,6 +116,9 @@ header {
             flex-direction: column;
             width: 80%;
             margin: 0 auto;
+            @include eXSmall {
+               padding-bottom: 20px;
+            }
 
             input {
                 padding: 2vh 2vw;

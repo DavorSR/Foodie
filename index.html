@@ -28,17 +28,24 @@
         </div>
         <!-- Navigation -->
         <nav class="main-nav">
-            <div class="main-nav_logo"><embed src="/Assets/Images/logo-horizontal-white-green.png"
-                    type=""><span>Foodie</span></div>
+            <div class="main-nav_logo"><embed src="/Assets/Images/logo-horizontal-white-green.png"><span>Foodie</span>
+            </div>
 
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Our Offer</a></li>
-                <li><a href="#">Galleries</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Shop</a></li>
+            <ul class="nav-menu">
+                <li class="nav-link"><a class="active" href="#">Home</a></li>
+                <li class="nav-link"><a href="#">Pages</a></li>
+                <li class="nav-link"><a href="#">Our Offer</a></li>
+                <li class="nav-link"><a href="#images">Galleries</a></li>
+                <li class="nav-link"><a href="#">Blog</a></li>
+                <li class="nav-link"><a href="#">Shop</a></li>
             </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
         </nav>
     </header>
 
@@ -65,7 +72,7 @@
             <!-- Select form for reservations -->
             <div class="table">
                 <h2 class="table_title">Book a table</h2>
-                <form action="" method="get">
+                <form action="#" method="get">
                     <input type="date" name="date" value="2022-05-28">
                     <select>
                         <option value="6:00am">6:00 am</option>
@@ -106,7 +113,7 @@
                         <option value="11:30pm">11:30 pm</option>
                     </select>
 
-                    <select name="select" id="">
+                    <select name="select">
                         <option value="1">1 Person</option>
                         <option value="2" selected="selected">2 People</option>
                         <option value="3">3 People</option>
@@ -248,22 +255,153 @@
 
         <!-- Pop up modal for gallery -->
         <section id="images">
-        <div class="gallery">
-            <div class="gallery_img">
-                <img class="g-2" src="/Assets/restaurantImg/1.jpg" alt="">
-                <img src="/Assets/restaurantImg/2.jpg" alt="">
-                <img src="/Assets/restaurantImg/3.jpg" alt="">
-                <img src="/Assets/restaurantImg/4.jpg" alt="">
-                <img src="/Assets/restaurantImg/5.jpg" alt="">
-                <img class="g-2" src="/Assets/restaurantImg/6.jpg" alt="">
-                
+            <div class="gallery">
+                <div class="gallery_img">
+                    <img class="g-2" src="/Assets/restaurantImg/1.jpg" alt="">
+                    <img src="/Assets/restaurantImg/2.jpg" alt="">
+                    <img src="/Assets/restaurantImg/3.jpg" alt="">
+                    <img src="/Assets/restaurantImg/4.jpg" alt="">
+                    <img src="/Assets/restaurantImg/5.jpg" alt="">
+                    <img class="g-2" src="/Assets/restaurantImg/6.jpg" alt="">
+
+                </div>
+                <div class="gallery_popup-img">
+                    <span>&times;</span>
+                    <img src="/" alt="">
+                </div>
             </div>
-            <div class="gallery_popup-img">
-                <span>&times;</span>
-                <img src="" alt="">
-            </div>
-        </div>
         </section>
+
+        <!-- Menu examples on landing page -->
+
+        <section>
+            <div class="menu">
+                <span class="menu_promo">TASTY & CRUNCHY</span>
+                <h2 class="menu_title">
+                    Our menu
+                </h2>
+                <p class="menu_moto">Our talented chefs prepare best meals for you</p>
+            </div>
+
+            <div class="menu-wrraper">
+                <!-- Content box 1 (repeated) -->
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+                        <h4 class="menu-wrraper_box-top-title"><embed src="/Assets/Images/greenleaf.svg"> TOMATO CAPRESE
+                        </h4>
+                        <span class="menu-wrraper_box-top-price">$ 4.00</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Heirloom cherry tomatoes, high-quality extra-virgin olive oil</p>
+
+                </div>
+                <!-- end of content box 1 -->
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+                        <h4 class="menu-wrraper_box-top-title"><embed src="/Assets/Images/greenleaf.svg"> VEGAN POTATO
+                        </h4>
+                        <span class="menu-wrraper_box-top-price">$ 2.00</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Potatoes, vegetable oil, yellow onion, garlic</p>
+
+                </div>
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+
+                        <h4 class="menu-wrraper_box-top-title"> SICILIAN BALLS</h4>
+                        <span class="menu-wrraper_box-top-price">$ 4.50</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Olive oil, onion, tomatoes juice, fresh basil, breadcrumbs</p>
+
+                </div>
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+                        <h4 class="menu-wrraper_box-top-title">GRILLED CHEESE</h4>
+                        <span class="menu-wrraper_box-top-price">$ 2.50</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Greek cheese, lemon, pepper, garlic powder</p>
+
+                </div>
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+                        <h4 class="menu-wrraper_box-top-title">HOT SOYA BURGERS</h4>
+                        <span class="menu-wrraper_box-top-price">$ 3.50</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Onion, good-quality organic soya, egg, chili, vegetable oiI</p>
+
+                </div>
+                <div class="menu-wrraper_box">
+                    <div class="menu-wrraper_box-top">
+                        <h4 class="menu-wrraper_box-top-title">CUCUMBER SALAD</h4>
+                        <span class="menu-wrraper_box-top-price">$ 3.00</span>
+                    </div>
+                    <p class="menu-wrraper_box-info">Cucumbers, cider or white vinegar, water</p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact form -->
+
+        <section>
+
+            <div class="contact-wrraper">
+                <div class="contact-wrraper_info">
+                    <span class="contact-wrraper_info-call">Call Us</span>
+                    <span class="contact-wrraper_info-phone"><a href="#">+1-202-555-016</a></span>
+                    <span class="contact-wrraper_info-time">
+                        mon-thu: 11.00 – 23.00<br>
+                        sat: 12.00 – 23.00<br>
+                        sun: 12.00 – 21.00
+                    </span>
+                    <span class="contact-wrraper_info-address">
+
+                        60 East 65th Street<br>
+                        New York City<br>
+                        NY 10065
+                    </span>
+                    <div class="contact-wrraper_social">
+                        <div class="social-buttons">
+                            <a href="https://www.facebook.com/" target="_blank"
+                                class="social-buttons__button social-button social-button--facebook"
+                                aria-label="Facebook">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank"
+                                class="social-buttons__button social-button social-button--instagram"
+                                aria-label="instagram">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                            </a>
+                            <a href="https://twitter.com/" target="_blank"
+                                class="social-buttons__button social-button social-button--twitter"
+                                aria-label="twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+
+
+                            </a>
+                            <a href="https://www.snapchat.com/" target="_blank"
+                                class="social-buttons__button social-button social-button--snapchat"
+                                aria-label="SnapChat">
+                                <i class="fa fa-snapchat-ghost"></i>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <iframe width="100%" height="400" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; <a href="https://github.com/DavorSR" target="_blank">DavorSR</a> - 2022 ALL RIGHTS RESERVED</p>
+        </footer>
 
     </main>
 

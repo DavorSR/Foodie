@@ -1,6 +1,7 @@
 .gallery {
     padding: 50px 0;
     overflow: hidden;
+    
 
     &_img {
         justify-content: center;
@@ -9,7 +10,6 @@
         width: 100vw;
         margin-top: 10px;
         display: grid;
- 
         grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
         column-gap: 10px;
         row-gap: 10px;
@@ -23,7 +23,6 @@
 
             &:hover {
                 -webkit-filter: brightness(70%);
-                animation: move-down 0.3s linear;
                 -webkit-transition: all 0.5s ease;
                 -moz-transition: all 0.5s ease;
                 -o-transition: all 0.5s ease;
@@ -69,7 +68,8 @@
 
 .g-2{
     grid-column: span 2;
+    @include eXSmall{
+        grid-column: span 1;
+    }
 }
-.g-3{
-    grid-column: span 2;
-}
+

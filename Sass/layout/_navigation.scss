@@ -7,6 +7,10 @@
     padding: 1vh 1vw;
     background-color: rgba($color: #000000, $alpha: 0.5);
     align-items: center;
+    @include eXSmall {
+       width: 100%;
+       font-size: 0.7rem;
+    }
 
     &_time {
         display: flex;
@@ -14,6 +18,9 @@
 
     &_social {
         display: flex;
+        @include eXSmall {
+           display: none;
+        }
 
         i {
             padding: 1vh 1vw;
@@ -36,6 +43,10 @@
     padding-left: 1vw;
     margin: 0 auto;
     background-color: $mainGreen;
+    @include eXSmall {
+        width: 100%;
+    }
+    
 
     &_logo {
         display: flex;
@@ -46,15 +57,36 @@
         }
     }
 
-    ul {
+    .nav-menu {
         display: flex;
         justify-content: space-evenly;
         list-style-type: none;
         font-size: clamp(1em, 1vw, 5rem);
 
-        li {
+        @include eXSmall {
+            position: fixed;
+            left: -100%;
+            top: 17vh;
+            gap: 0;
+            flex-direction: column;
+            background: $mainGreen;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            z-index: 1000;
+
+            &.active{
+                left: 0;
+            }
+        }
+
+        .nav-link {
             cursor: pointer;
             padding: 0 1vw;
+
+            @include eXSmall {
+                margin: 16px 0;
+            }
 
             a {
                 color: white;
@@ -65,5 +97,37 @@
                 }
             }
         }
+    }
+}
+
+// Hamburger menu
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0 20px;
+    @include eXSmall {
+        display: block;
+
+        &.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        &.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        &.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
     }
 }
