@@ -68,12 +68,12 @@
         display: flex;
         justify-content: space-evenly;
         list-style-type: none;
-        font-size: clamp(1em, 1vw, 5rem);
+        font-size: clamp(1em, 1vw, 4rem);
 
         @include eXSmall {
             position: fixed;
             left: -100%;
-            top: 17vh;
+            top: 13vh;
             gap: 0;
             flex-direction: column;
             background: $mainGreen;

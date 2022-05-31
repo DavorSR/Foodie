@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        font-size: 1.1rem;
+        font-size:clamp(0.8rem, 1.2vw, 4rem);
         @include eXSmall {
             flex-direction: column;
             font-size: 0.8rem;
@@ -21,7 +21,7 @@
         }
 
         .fullMenu {
-            font-size: 1.2rem;
+            font-size:clamp(0.8rem, 1.2vw, 4rem);
             color: $mainGreen;
             padding-bottom: 1vh;
             border-bottom: 2px solid $mainGreen;

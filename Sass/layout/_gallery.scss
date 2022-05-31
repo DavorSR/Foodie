@@ -1,18 +1,20 @@
 .gallery {
     padding: 50px 0;
     overflow: hidden;
-    
 
     &_img {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
         margin-top: 10px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
         column-gap: 10px;
         row-gap: 10px;
+        @include wide{
+            grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+        }
 
         img {
             width: 100%;
@@ -70,6 +72,15 @@
     grid-column: span 2;
     @include eXSmall{
         grid-column: span 1;
+    }
+    @include desktop{
+        grid-column: span 1;
+    }
+}
+.g-3{
+    grid-column: span 1;
+    @include wide{
+        grid-column: span 2;
     }
 }
 

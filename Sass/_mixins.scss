@@ -27,6 +27,11 @@ $wide: 2160px;
         @content;
     }
 }
+@mixin desktop {
+    @media (min-width: 1400px) and (max-width: $wide), (orientation: portrait) {
+        @content;
+    }
+}
 @mixin wide {
     @media (min-width: $wide) {
         @content;

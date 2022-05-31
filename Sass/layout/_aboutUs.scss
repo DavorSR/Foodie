@@ -152,7 +152,7 @@
     }
 
     &_title {
-        font-size: clamp(2.5rem, 3vw, 5rem);
+        font-size: clamp(2rem, 3vw, 5rem);
  
     }
 
@@ -198,7 +198,7 @@
         }
 
         &-text {
-            font-size: clamp(1.4rem, 1vw, 2rem);
+            font-size: clamp(1rem, 1vw, 2rem);
             color: gray;
             width: 80%;
             margin: 0 auto;
@@ -207,7 +207,7 @@
         }
 
         &-link {
-            font-size: clamp(1.6em, 1.2vw, 3rem);
+            font-size: clamp(1rem, 1.2vw, 3rem);
             border-bottom: 3px solid lightgray;
             color: #000;
             text-transform: uppercase;

@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Merienda", cursive;
+  scroll-behavior: smooth;
 }
 
 .working-time {
@@ -84,13 +85,13 @@
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
-  font-size: clamp(1em, 1vw, 5rem);
+  font-size: clamp(1em, 1vw, 4rem);
 }
 @media (max-width: 505px) {
   .main-nav .nav-menu {
     position: fixed;
     left: -100%;
-    top: 17vh;
+    top: 13vh;
     gap: 0;
     flex-direction: column;
     background: #8ec63f;
@@ -153,6 +154,7 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
   height: 100vh;
 }
+
 #booking {
   width: 80%;
   margin: 0 auto;
@@ -178,6 +180,13 @@ header {
     transform: translate(-50%, -50%);
   }
 }
+@media (min-width: 2160px) {
+  #booking {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 #booking .text {
   color: white;
   width: 70%;
@@ -198,16 +207,16 @@ header {
 }
 #booking .text_promo {
   color: #8ec63f;
-  font-size: clamp(1.6em, 2vw, 4rem);
+  font-size: clamp(1.6em, 2vw, 5rem);
 }
 #booking .text_title {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 7rem);
 }
 #booking .text_title span {
   color: #8ec63f;
 }
 #booking .text_info {
-  font-size: clamp(1.4em, 1.5vw, 3.5rem);
+  font-size: clamp(1.4em, 1.5vw, 4.5rem);
   padding-bottom: 4vh;
   width: 60%;
 }
@@ -239,7 +248,7 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   color: white;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 3.5rem);
 }
 @media (max-width: 505px) {
   #booking .text_btn-start {
@@ -265,7 +274,7 @@ header {
   border: 2px solid white;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 3.5rem);
 }
 @media (max-width: 505px) {
   #booking .text_btn-menu {
@@ -304,6 +313,7 @@ header {
 #booking .table_title {
   color: white;
   padding-bottom: 1rem;
+  font-size: clamp(0.8rem, 1.2vw, 4rem);
 }
 #booking .table form {
   display: flex;
@@ -319,7 +329,7 @@ header {
 #booking .table form input {
   padding: 2vh 2vw;
   margin: 1vh 0;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.2vw, 4rem);
   border-radius: 15px;
   background: transparent;
   color: white;
@@ -328,7 +338,7 @@ header {
 #booking .table form select {
   padding: 2vh 2vw;
   margin: 1vh 0;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.2vw, 4rem);
   border-radius: 15px;
   background: transparent;
   color: white;
@@ -348,7 +358,7 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   color: white;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 3.5rem);
 }
 #booking .table form .btn_submit:hover {
   background-color: transparent;
@@ -371,7 +381,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 1.2vw, 4rem);
 }
 @media (max-width: 505px) {
   .special_info {
@@ -383,7 +393,7 @@ header {
   color: red;
 }
 .special_info .fullMenu {
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1.2vw, 4rem);
   color: #8ec63f;
   padding-bottom: 1vh;
   border-bottom: 2px solid #8ec63f;
@@ -565,7 +575,7 @@ header {
   font-size: clamp(1.1em, 1.5vw, 4rem);
 }
 .pick_title {
-  font-size: clamp(2.5rem, 3vw, 5rem);
+  font-size: clamp(2rem, 3vw, 5rem);
 }
 .pick_moto {
   font-size: clamp(1.4rem, 1.1vw, 3rem);
@@ -613,14 +623,14 @@ header {
   }
 }
 .pick-options_box-text {
-  font-size: clamp(1.4rem, 1vw, 2rem);
+  font-size: clamp(1rem, 1vw, 2rem);
   color: gray;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 4vh;
 }
 .pick-options_box-link {
-  font-size: clamp(1.6em, 1.2vw, 3rem);
+  font-size: clamp(1rem, 1.2vw, 3rem);
   border-bottom: 3px solid lightgray;
   color: #000;
   text-transform: uppercase;
@@ -637,12 +647,17 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
   column-gap: 10px;
   row-gap: 10px;
+}
+@media (min-width: 2160px) {
+  .gallery_img {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  }
 }
 .gallery_img img {
   width: 100%;
@@ -696,6 +711,20 @@ header {
 @media (max-width: 505px) {
   .g-2 {
     grid-column: span 1;
+  }
+}
+@media (min-width: 1400px) and (max-width: 2160px), (orientation: portrait) {
+  .g-2 {
+    grid-column: span 1;
+  }
+}
+
+.g-3 {
+  grid-column: span 1;
+}
+@media (min-width: 2160px) {
+  .g-3 {
+    grid-column: span 2;
   }
 }
 
@@ -755,14 +784,14 @@ header {
   justify-self: flex-start;
 }
 .menu-wrraper_box-top-title {
-  font-size: clamp(2rem, 1.4vw, 3rem);
+  font-size: clamp(1.6rem, 1.4vw, 3rem);
 }
 .menu-wrraper_box-top-price {
-  font-size: clamp(1.5rem, 1.2vw, 2.6rem);
+  font-size: clamp(1.2rem, 1.2vw, 2.6rem);
   font-weight: bold;
 }
 .menu-wrraper_box-info {
-  font-size: clamp(1.4rem, 1.1vw, 2rem);
+  font-size: clamp(1rem, 1.1vw, 2rem);
   color: gray;
   text-align: left;
   border-bottom: 1px solid gray;
@@ -784,7 +813,7 @@ header {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 10vh;
+  padding: 2vh 0;
 }
 @media (max-width: 505px) {
   .contact-wrraper_info {
@@ -815,17 +844,17 @@ header {
 }
 .contact-wrraper_info-phone {
   margin: 2vh 0;
-  font-size: clamp(2rem, 1.5vw, 5rem);
+  font-size: clamp(1.2rem, 1.5vw, 4rem);
 }
 .contact-wrraper_info-phone a {
   color: white;
 }
 .contact-wrraper_info-time {
-  font-size: clamp(1.4rem, 1.5vw, 5rem);
+  font-size: clamp(1.2rem, 1.5vw, 4rem);
 }
 .contact-wrraper_info-address {
   margin: 2vh 0;
-  font-size: clamp(2rem, 1.5vw, 5rem);
+  font-size: clamp(1.2rem, 1.5vw, 4rem);
 }
 
 .social-buttons {
@@ -912,18 +941,28 @@ header {
 }
 @media (max-width: 505px) {
   .contact-wrraper_map {
-    width: 100% !important;
+    width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
   .contact-wrraper_map {
-    width: 50%;
+    margin: auto 0;
+  }
+}
+@media (min-width: 1400px) and (max-width: 2160px), (orientation: portrait) {
+  .contact-wrraper_map {
+    margin: auto 0;
+  }
+}
+@media (min-width: 2160px) {
+  .contact-wrraper_map {
     margin: auto 0;
   }
 }
 
 footer {
   background-color: #8ec63f;
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
   padding: 3vh 0;
   text-align: center;
 }
