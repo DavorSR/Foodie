@@ -154,14 +154,9 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
   height: 100vh;
 }
-@media only screen and (min-width: 720px) and (orientation: landscape) {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
   header {
     height: 150vh;
-  }
-}
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  header {
-    height: 70vh;
   }
 }
 
@@ -184,7 +179,7 @@ header {
     transform: translate(-50%, -50%);
   }
 }
-@media only screen and (min-width: 720px) and (orientation: landscape) {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
   #booking {
     flex-direction: column;
     width: 100%;
@@ -200,15 +195,6 @@ header {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking {
-    flex-direction: row;
-    width: 80%;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -150%);
   }
 }
 @media (min-width: 2160px) {
@@ -229,7 +215,7 @@ header {
     padding-bottom: 5vh;
   }
 }
-@media only screen and (min-width: 720px) and (orientation: landscape) {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
   #booking .text {
     width: 50%;
     text-align: center;
@@ -239,12 +225,6 @@ header {
 @media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
   #booking .text {
     width: 100%;
-    text-align: center;
-    padding-bottom: 5vh;
-  }
-}
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking .text {
     text-align: center;
     padding-bottom: 5vh;
   }
@@ -279,11 +259,6 @@ header {
     padding-left: 20px;
   }
 }
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking .text_info {
-    margin: 0 auto;
-  }
-}
 #booking .text_btn {
   margin: 0 auto;
 }
@@ -302,11 +277,6 @@ header {
 @media (max-width: 505px) {
   #booking .text_btn-start {
     width: 40%;
-  }
-}
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking .text_btn-start {
-    font-size: 0.6rem;
   }
 }
 #booking .text_btn-start:hover {
@@ -335,11 +305,6 @@ header {
     width: 40%;
   }
 }
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking .text_btn-menu {
-    font-size: 0.6rem;
-  }
-}
 #booking .text_btn-menu:hover {
   background-color: white;
   color: black;
@@ -351,7 +316,7 @@ header {
   transition: all 0.2s ease;
 }
 #booking .table {
-  width: 30%;
+  width: 40%;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   padding: 2rem 0;
@@ -365,13 +330,6 @@ header {
 @media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
   #booking .table {
     width: 80%;
-    margin: 0 auto;
-    padding-bottom: 1vh;
-  }
-}
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #booking .table {
-    width: 30%;
     margin: 0 auto;
     padding-bottom: 1vh;
   }

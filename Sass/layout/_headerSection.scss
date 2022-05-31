@@ -5,9 +5,7 @@ header {
 @include landscape{
     height: 150vh;
 }
-@include landscapeTablet{
-    height: 70vh;
-}
+
 }
 
 #booking {
@@ -40,13 +38,13 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    @include landscapeTablet {
-        flex-direction: row;
-        width: 80%;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -150%);
-    }
+    // @include landscapeTablet {
+    //     flex-direction: row;
+    //     width: 80%;
+    //     top: 10%;
+    //     left: 50%;
+    //     transform: translate(-50%, -150%);
+    // }
     @include wide {
         top: 45% !important;
         left: 50%;
@@ -71,11 +69,11 @@ header {
             text-align: center;
             padding-bottom: 5vh;
         }
-        @include landscapeTablet {
-            // width: 100%;
-            text-align: center;
-            padding-bottom: 5vh;
-        }
+        // @include landscapeTablet {
+        //     // width: 100%;
+        //     text-align: center;
+        //     padding-bottom: 5vh;
+        // }
 
         &_promo {
             color: $mainGreen;
@@ -105,9 +103,9 @@ header {
                 text-align: center;
                 padding-left: 20px;
             }
-            @include landscapeTablet {
-                margin: 0 auto;
-            }
+            // @include landscapeTablet {
+            //     margin: 0 auto;
+            // }
         }
     }
 
@@ -128,9 +126,9 @@ header {
             @include eXSmall {
                 width: 40%;
             }
-            @include landscapeTablet {
-                font-size: 0.6rem;
-            }
+            // @include landscapeTablet {
+            //     font-size: 0.6rem;
+            // }
 
             &:hover {
                 background-color: transparent;
@@ -152,9 +150,9 @@ header {
             @include eXSmall {
                 width: 40%;
             }
-            @include landscapeTablet {
-                font-size: 0.6rem;
-            }
+            // @include landscapeTablet {
+            //     font-size: 0.6rem;
+            // }
 
             &:hover {
                 background-color: white;
@@ -166,7 +164,7 @@ header {
     }
 
     .table {
-        width: 30%;
+        width: 40%;
         text-align: center;
         background: rgba(0, 0, 0, 0.8);
         padding: 2rem 0;
@@ -180,14 +178,14 @@ header {
             padding-bottom: 1vh;
         }
 
-        @include landscapeTablet {
-            width: 30%;
-            margin: 0 auto;
-            padding-bottom: 1vh;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-40%, -50%);
-      }
+    //     @include landscapeTablet {
+    //         width: 30%;
+    //         margin: 0 auto;
+    //         padding-bottom: 1vh;
+    //         // top: 50%;
+    //         // left: 50%;
+    //         // transform: translate(-40%, -50%);
+    //   }
 
         &_title {
             color: white;
