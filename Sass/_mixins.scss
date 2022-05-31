@@ -17,7 +17,17 @@ $wide: 2160px;
 }
 
 @mixin mobile {
-    @media (min-width: 506px) and (max-width: $md) {
+    @media (min-width: 506px) and (max-width: $md), (orientation: portrait) {
+        @content;
+    }
+}
+@mixin landscape {
+    @media only screen and (min-width: 720px) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin landscapeTablet {
+    @media only screen and (min-width: 992px) and (orientation: landscape) {
         @content;
     }
 }
