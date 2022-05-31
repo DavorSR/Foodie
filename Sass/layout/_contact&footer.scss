@@ -16,19 +16,19 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 2vh 0;
-    @include eXSmall {
-      padding-bottom: 20px;
-    }
-    @include tablet {
-      padding-bottom: 20px;
-    }
+    // @include eXSmall {
+    //   padding-bottom: 20px;
+    // }
+    // @include tablet {
+    //   padding-bottom: 20px;
+    // }
 
     &-call {
       background-color: $mainGreen;
       width: fit-content;
       padding: 1vh 2vw;
       text-align: center;
-      font-size: clamp(1.4rem, 1.2vw, 4rem);
+      font-size: clamp(1.2rem, 1.2vw, 4rem);
       @include eXSmall {
         width: 100%;
       }
@@ -167,7 +167,7 @@ $social-button-colors: (
 
 footer {
   background-color: $mainGreen;
-  font-size: clamp(1.2rem, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
   padding: 3vh 0;
   text-align: center;
 

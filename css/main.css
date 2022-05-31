@@ -91,7 +91,7 @@
   .main-nav .nav-menu {
     position: fixed;
     left: -100%;
-    top: 13vh;
+    top: 20vh;
     gap: 0;
     flex-direction: column;
     background: #8ec63f;
@@ -154,7 +154,6 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
   height: 100vh;
 }
-
 #booking {
   width: 80%;
   margin: 0 auto;
@@ -169,6 +168,9 @@ header {
   #booking {
     flex-direction: column;
     width: 100%;
+    top: 62% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
@@ -191,9 +193,9 @@ header {
   color: white;
   width: 70%;
 }
-@media (max-width: 505px) {
+@media (min-width: 506px) and (max-width: 768px) {
   #booking .text {
-    width: 90%;
+    width: 50%;
     text-align: center;
     padding-bottom: 5vh;
   }
@@ -207,16 +209,16 @@ header {
 }
 #booking .text_promo {
   color: #8ec63f;
-  font-size: clamp(1.6em, 2vw, 5rem);
+  font-size: clamp(1.3em, 2vw, 5rem);
 }
 #booking .text_title {
-  font-size: clamp(2.5rem, 5vw, 7rem);
+  font-size: clamp(1.8rem, 5vw, 7rem);
 }
 #booking .text_title span {
   color: #8ec63f;
 }
 #booking .text_info {
-  font-size: clamp(1.4em, 1.5vw, 4.5rem);
+  font-size: clamp(1em, 1.5vw, 4.5rem);
   padding-bottom: 4vh;
   width: 60%;
 }
@@ -784,14 +786,14 @@ header {
   justify-self: flex-start;
 }
 .menu-wrraper_box-top-title {
-  font-size: clamp(1.6rem, 1.4vw, 3rem);
+  font-size: clamp(1.2rem, 1.4vw, 3rem);
 }
 .menu-wrraper_box-top-price {
   font-size: clamp(1.2rem, 1.2vw, 2.6rem);
   font-weight: bold;
 }
 .menu-wrraper_box-info {
-  font-size: clamp(1rem, 1.1vw, 2rem);
+  font-size: clamp(0.8rem, 1.1vw, 2rem);
   color: gray;
   text-align: left;
   border-bottom: 1px solid gray;
@@ -815,22 +817,12 @@ header {
   margin: 0 auto;
   padding: 2vh 0;
 }
-@media (max-width: 505px) {
-  .contact-wrraper_info {
-    padding-bottom: 20px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px), (orientation: portrait) {
-  .contact-wrraper_info {
-    padding-bottom: 20px;
-  }
-}
 .contact-wrraper_info-call {
   background-color: #8ec63f;
   width: fit-content;
   padding: 1vh 2vw;
   text-align: center;
-  font-size: clamp(1.4rem, 1.2vw, 4rem);
+  font-size: clamp(1.2rem, 1.2vw, 4rem);
 }
 @media (max-width: 505px) {
   .contact-wrraper_info-call {
@@ -962,7 +954,7 @@ header {
 
 footer {
   background-color: #8ec63f;
-  font-size: clamp(1.2rem, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
   padding: 3vh 0;
   text-align: center;
 }
