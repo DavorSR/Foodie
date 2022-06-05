@@ -1,4 +1,4 @@
-header {
+#header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../Assets/Images/header.jpg") no-repeat center center/cover;
     height: 100vh;
@@ -38,13 +38,7 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    // @include landscapeTablet {
-    //     flex-direction: row;
-    //     width: 80%;
-    //     top: 10%;
-    //     left: 50%;
-    //     transform: translate(-50%, -150%);
-    // }
+   
     @include wide {
         top: 45% !important;
         left: 50%;
@@ -69,12 +63,7 @@ header {
             text-align: center;
             padding-bottom: 5vh;
         }
-        // @include landscapeTablet {
-        //     // width: 100%;
-        //     text-align: center;
-        //     padding-bottom: 5vh;
-        // }
-
+ 
         &_promo {
             color: $mainGreen;
             font-size: clamp(1.3em, 2vw, 5rem);
@@ -103,9 +92,7 @@ header {
                 text-align: center;
                 padding-left: 20px;
             }
-            // @include landscapeTablet {
-            //     margin: 0 auto;
-            // }
+ 
         }
     }
 
@@ -126,10 +113,7 @@ header {
             @include eXSmall {
                 width: 40%;
             }
-            // @include landscapeTablet {
-            //     font-size: 0.6rem;
-            // }
-
+  
             &:hover {
                 background-color: transparent;
                 color: $mainGreen;
@@ -150,9 +134,7 @@ header {
             @include eXSmall {
                 width: 40%;
             }
-            // @include landscapeTablet {
-            //     font-size: 0.6rem;
-            // }
+       
 
             &:hover {
                 background-color: white;
@@ -178,14 +160,6 @@ header {
             padding-bottom: 1vh;
         }
 
-    //     @include landscapeTablet {
-    //         width: 30%;
-    //         margin: 0 auto;
-    //         padding-bottom: 1vh;
-    //         // top: 50%;
-    //         // left: 50%;
-    //         // transform: translate(-40%, -50%);
-    //   }
 
         &_title {
             color: white;
