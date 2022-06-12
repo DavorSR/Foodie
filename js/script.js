@@ -1,8 +1,48 @@
+// Hamburger menu
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.onclick = () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-link").forEach(n => n.onclick = () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+});
+
+
 
 // JSON menu fetch
 
-const foodMenu = "../menu.json";
-const main = document.querySelector('.main-menu');
+const foodMenu = "../json/menu.json";
+const main = document.querySelector('.warrp-menu');
+
+
+function showMenu(data) {
+
+    data.forEach(element => {
+        const { name, price, image, rating, description } = element;
+        const hrana = document.createElement('div');
+        hrana.classList.add('warrp-menu_box');
+        hrana.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <div class="top">
+            <h4 class="title">${name}
+            </h4>
+            <span class="price">$${price}</span>
+        </div>
+        <p class="info">${description}</p>`
+
+        main.appendChild(hrana);
+
+    }
+
+    )
+}
+
 
 function getMenu(url) {
     fetch(url)
@@ -16,30 +56,44 @@ function getMenu(url) {
 getMenu(foodMenu)
 
 
+// Blog post fetch and show
 
-function showMenu(data) {
+const blogPost = "../json/blog-post.json";
+const mainBlog = document.querySelector('.blog-main');
+
+function showBlog(data) {
 
     data.forEach(element => {
-        const { name, price, image, rating } = element;
-        const hrana = document.createElement('div');
-        hrana.classList.add('main-menu_box');
-        hrana.innerHTML = `<img src="${image}" alt="${name}">
-            <div class="price">
-            ${price}
-            </div>
-            <div class="text">
-            <h3 class="main-menu_box-title">
-            ${name}
-            </h3>
-            <span class="rating ${getRatingColor(rating)}"">${rating}</span>
-            </div>`
+        const { name, image, rating, description } = element;
+        const allPost = document.createElement('div');
+        allPost.classList.add('blog-main_box');
+        allPost.innerHTML = `<img src="${image}" alt="${name}">
+      
+        <div class="text">
+        <h3 class="main-menu_box-title">
+        ${name}
+        </h3>
+        <span class="rating ${getRatingColor(rating)}">${rating}</span>
+        </div>
+        <p class="description">${description}</p>`
 
-
-        main.appendChild(hrana);
+        mainBlog.appendChild(allPost);
 
     }
-  
-)}
+
+    )
+}
+
+function getPost(url) {
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            showBlog(data.blogPost);
+
+        })
+}
+
+getPost(blogPost)
 
 // basic if else statment to color rating depend on the score
 function getRatingColor(vote) {
@@ -51,6 +105,9 @@ function getRatingColor(vote) {
         return 'red';
     }
 }
+
+
+
 
 // Show image modal
 
@@ -76,20 +133,20 @@ document.querySelector('.gallery_popup-img span').onclick = () => {
 }
 
 
-// Hamburger menu
+// // Hamburger menu
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+// const hamburger = document.querySelector(".hamburger");
+// const navMenu = document.querySelector(".nav-menu");
 
-hamburger.onclick = () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
+// hamburger.onclick = () => {
+//     hamburger.classList.toggle("active");
+//     navMenu.classList.toggle("active");
+// }
 
-document.querySelectorAll(".nav-link").forEach(n => n.onclick = () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-});
+// document.querySelectorAll(".nav-link").forEach(n => n.onclick = () => {
+//     hamburger.classList.remove("active");
+//     navMenu.classList.remove("active");
+// });
 
 // Intersection Observer
 
@@ -118,4 +175,7 @@ loadingAnimation();
 
 
 
+
+var prev = document.querySelector('.pagination_switchPage-left');
+var next = document.querySelector('.pagination_switchPage-right');
 

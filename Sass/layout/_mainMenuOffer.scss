@@ -1,79 +1,207 @@
 .main-menu {
+    padding: 8vh 0;
+    text-align: center;
+
+    &_promo {
+        color: $mainGreen;
+        font-size: clamp(1em, 1.5vw, 4rem);
+    }
+
+    &_title {
+        font-size: clamp(1.4rem, 3vw, 5rem);
+    }
+
+    &_moto {
+        font-size: clamp(0.9em, 1.1vw, 3rem);
+        color: gray;
+    }
+}
+
+.warrp-menu {
+    margin: 5vh auto 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
     width: 80%;
-    margin: 0 auto 5vh auto;
+
     @include eXSmall {
-        flex-direction: column;
+        padding-bottom: 5vh;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 45%;
+        float: left;
+        clear: left;
+        margin-right: 1vw;
+        align-items: center;
     }
 
     &_box {
-        width: 33%;
-        justify-content: space-between;
-        margin: 1vh auto;
-        padding: 1vh 1vw;
-        position: relative;
-        overflow: hidden;
-        background-color: rgb(249, 222, 222);
-
+        margin: 10px;
+        width: 45%;
+        text-align: center;
         @include eXSmall {
             width: 100%;
+            padding: 0 2vh;
+        }
+        @include tablet {
+            width: 100%;
+            padding: 0 2vh;
         }
 
-        img {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            vertical-align: top;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2vh;
 
-            &:hover {
-                transition: all 0.3s ease-in;
-                -moz-transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-                opacity: 0.7;
+            .title {
+                font-size: clamp(1.2rem, 1.4vw, 3rem);
+            }
+            .price {
+                font-size: clamp(1.2rem, 1.2vw, 2.6rem);
+                font-weight: bold;
             }
         }
 
-        .price {
-            position: absolute;
-            padding-left: 2vw;
-            border-radius: 0 5px 5px 0;
-            top: 10%;
-            width: 15vw;
-            background-color: rgb(22, 186, 22);
-            color: white;
-            transform: scale(1.1);
+        .info {
+            font-size: clamp(0.8rem, 1.1vw, 2rem);
+            color: gray;
+            text-align: left;
+            border-bottom: 1px solid gray;
+            padding: 0 0 2vh 0;
         }
     }
 }
 
-.main-menu_box > .text {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1vh;
 
-    h3 {
-        font-size: clamp(1em, 1.5vw, 4.5rem);
-    }
+// .main-menu {
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 80%;
+//     margin: 0 auto 5vh auto;
+//     @include eXSmall {
+//         flex-direction: column;
+//     }
 
-    .rating {
-        float: right;
-        color: white;
-        font-size: clamp(0.8rem, 1vw, 4rem);
-        border-radius: 20px;
-        padding: 5px;
+//     &_box {
+//         width: 33%;
+//         justify-content: space-between;
+//         margin: 1vh auto;
+//         padding: 1vh 1vw;
+//         position: relative;
+//         overflow: hidden;
+//         background-color: rgb(249, 222, 222);
 
-        &.green {
-            background-color: rgb(22, 186, 22);
-        }
+//         @include eXSmall {
+//             width: 100%;
+//         }
 
-        &.orange {
-            background-color: orange;
-        }
+//         img {
+//             width: 100%;
+//             height: 150px;
+//             border-radius: 10px;
+//             vertical-align: top;
 
-        &.red {
-            background-color: red;
-        }
-    }
-}
+//             &:hover {
+//                 transition: all 0.3s ease-in;
+//                 -moz-transform: scale(1.1);
+//                 -webkit-transform: scale(1.1);
+//                 transform: scale(1.1);
+//                 opacity: 0.7;
+//             }
+//         }
+
+//         .price {
+//             position: absolute;
+//             padding-left: 2vw;
+//             border-radius: 0 5px 5px 0;
+//             top: 10%;
+//             width: 15vw;
+//             background-color: rgb(22, 186, 22);
+//             color: white;
+//             transform: scale(1.1);
+//         }
+//     }
+// }
+
+// .main-menu_box > .text {
+//     display: flex;
+//     justify-content: space-between;
+//     padding-top: 1vh;
+
+//     h3 {
+//         font-size: clamp(1em, 1.5vw, 4.5rem);
+//     }
+
+//     .rating {
+//         float: right;
+//         color: white;
+//         font-size: clamp(0.8rem, 1vw, 4rem);
+//         border-radius: 20px;
+//         padding: 5px;
+
+//         &.green {
+//             background-color: rgb(22, 186, 22);
+//         }
+
+//         &.orange {
+//             background-color: orange;
+//         }
+
+//         &.red {
+//             background-color: red;
+//         }
+//     }
+// }
+
+// .main-menu_box > .image_overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 80%;
+//     background: rgba(0, 0, 0, 0.8);
+//     color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     padding: 0 1vw;
+//     opacity: 0;
+//     transition: opacity 0.25s ease-in;
+
+//     &:hover {
+//         opacity: 1;
+//     }
+
+//     & > * {
+//         transform: translate(20px);
+//         transition: transform 0.25s ease-in;
+
+//         &:hover > * {
+//             transform: translateY(0);
+//         }
+//     }
+// }
+
+// .main-menu {
+//     padding: 8vh 0;
+//     text-align: center;
+
+//     &_promo {
+//         color: $mainGreen;
+//         font-size: clamp(1em, 1.5vw, 4rem);
+//     }
+
+//     &_title {
+//         font-size: clamp(1.4rem, 3vw, 5rem);
+//     }
+
+//     &_moto {
+//         font-size: clamp(0.9em, 1.1vw, 3rem);
+//         color: gray;
+//     }
+// }

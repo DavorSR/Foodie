@@ -1,0 +1,63 @@
+{ "foodMenu" :[
+
+    {
+        "name":"Spaghetti Bolognese",
+        "price":"25",
+        "image":"/Assets/recipesIMG/bolonese.jpg",
+        "rating": 4.9,
+        "description":"Spaghetti Bolognese is a classic Italian meat sauce that is a staple in most families. My super simple Spaghetti Bolognese is the perfect dinner for any night of the week and will wow your family or guests."
+    },
+    {
+        "name":"Vegan Tacos",
+        "price":"17",
+        "image":"/Assets/recipesIMG/takos.jpg",
+        "rating": 4.2,
+        "description":"These versatile vegan tacos are packed with black beans, vegan taco meat, pico de gallo and avocado and topped with a tahini sauce. Filling, colorful and delicious!"
+    },
+    {
+        "name":"Vegan Chili",
+        "price":"12",
+        "image":"/Assets/recipesIMG/VeganChili.jpg",
+        "rating": 4.4,
+        "description":"This vegan chilli packs in plenty of vegetables and doesn’t fall short on the flavour front. Serve it with rice or in jacket potatoes for a filling supper."
+    },
+    {
+        "name":"Roasted aubergine & curry",
+        "price":"21",
+        "image":"/Assets/recipesIMG/auberigine.jpg",
+        "rating": 4.7,
+        "description":"Slightly sweet with added richness from the coconut milk, this simple vegan curry is a winner. It's also freezable if you need a quick midweek fix."
+    },
+    {
+        "name":"Spaghetti Bolognese",
+        "price":"25",
+        "image":"/Assets/recipesIMG/bolonese.jpg",
+        "rating": 4.9,
+        "description":"Spaghetti Bolognese is a classic Italian meat sauce that is a staple in most families. My super simple Spaghetti Bolognese is the perfect dinner for any night of the week and will wow your family or guests."
+    },
+    {
+        "name":"Vegan Tacos",
+        "price":"17",
+        "image":"/Assets/recipesIMG/takos.jpg",
+        "rating": 3.9,
+        "description":"These versatile vegan tacos are packed with black beans, vegan taco meat, pico de gallo and avocado and topped with a tahini sauce. Filling, colorful and delicious!"
+    },
+    {
+        "name":"Vegan Chili",
+        "price":"12",
+        "image":"/Assets/recipesIMG/VeganChili.jpg",
+        "rating": 4.4,
+        "description":"This vegan chilli packs in plenty of vegetables and doesn’t fall short on the flavour front. Serve it with rice or in jacket potatoes for a filling supper."
+    },
+    {
+        "name":"Roasted aubergine & curry",
+        "price":"21",
+        "image":"/Assets/recipesIMG/auberigine.jpg",
+        "rating": 2.7,
+        "description":"Slightly sweet with added richness from the coconut milk, this simple vegan curry is a winner. It's also freezable if you need a quick midweek fix."
+    }
+
+
+
+
+]}
