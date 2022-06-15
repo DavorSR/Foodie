@@ -41,6 +41,12 @@
     font-size: 0.9rem;
   }
 }
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  .working-time {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
 .working-time_time {
   display: flex;
 }
@@ -85,6 +91,11 @@
     width: 100%;
   }
 }
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  .main-nav {
+    width: 100%;
+  }
+}
 .main-nav_logo {
   display: flex;
   justify-content: center;
@@ -102,7 +113,24 @@
   .main-nav .nav-menu {
     position: fixed;
     left: -100%;
-    top: 20vh;
+    top: 19vh;
+    gap: 0;
+    flex-direction: column;
+    background: #8ec63f;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  .main-nav .nav-menu.active {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  .main-nav .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 35vh;
     gap: 0;
     flex-direction: column;
     background: #8ec63f;
@@ -151,6 +179,20 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 .hamburger .bar {
   display: block;
   width: 25px;
@@ -165,7 +207,12 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/header.jpg") no-repeat center center/cover;
   height: 100vh;
 }
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+@media (max-width: 505px) {
+  #header {
+    height: 105vh;
+  }
+}
+@media only screen and (max-width: 920px) and (orientation: landscape) {
   #header {
     height: 150vh;
   }
@@ -190,7 +237,7 @@
     transform: translate(-50%, -50%);
   }
 }
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+@media only screen and (max-width: 920px) and (orientation: landscape) {
   #booking {
     flex-direction: column;
     width: 100%;
@@ -226,9 +273,16 @@
     padding-bottom: 5vh;
   }
 }
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+@media only screen and (max-width: 920px) and (orientation: landscape) {
   #booking .text {
     width: 50%;
+    text-align: center;
+    padding-bottom: 5vh;
+  }
+}
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  #booking .text {
+    width: 100%;
     text-align: center;
     padding-bottom: 5vh;
   }
@@ -266,8 +320,13 @@
   #booking .text_info {
     text-align: center;
     width: 100%;
-    text-align: center;
     padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  #booking .text_info {
+    text-align: center;
+    width: 100%;
   }
 }
 #booking .text_btn {
@@ -343,6 +402,13 @@
     width: 80%;
     margin: 0 auto;
     padding-bottom: 1vh;
+  }
+}
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  #booking .table {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3vh;
   }
 }
 #booking .table_title {

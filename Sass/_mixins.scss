@@ -6,6 +6,23 @@
     transition: all 0.2s ease;
 }
 
+// 3 white bar and animations for mobile
+@mixin hamburgerAnimation {
+    display: block;
+
+    &.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    &.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    &.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+// Media queries for mobile
+
 $md: 768px;
 $lg: 992px;
 $wide: 2160px;
@@ -22,7 +39,12 @@ $wide: 2160px;
     }
 }
 @mixin landscape {
-    @media only screen and (max-width:900px) and (orientation: landscape) {
+    @media only screen and (max-width: 920px) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin landscapeMobile {
+    @media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
         @content;
     }
 }

@@ -15,6 +15,10 @@
        width: 100%;
        font-size: 0.9rem;
     }
+    @include landscapeMobile {
+       width: 100%;
+       font-size: 0.9rem;
+    }
 
     &_time {
         display: flex;
@@ -49,8 +53,12 @@
     background-color: $mainGreen;
     @include eXSmall {
         width: 100%;
+        
     }
     @include tablet{
+        width: 100%;
+    }
+    @include landscapeMobile{
         width: 100%;
     }
     
@@ -73,7 +81,23 @@
         @include eXSmall {
             position: fixed;
             left: -100%;
-            top: 20vh;
+            top: 19vh;
+            gap: 0;
+            flex-direction: column;
+            background: $mainGreen;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            z-index: 1000;
+
+            &.active{
+                left: 0;
+            }
+        }
+        @include landscapeMobile {
+            position: fixed;
+            left: -100%;
+            top: 35vh;
             gap: 0;
             flex-direction: column;
             background: $mainGreen;
@@ -115,17 +139,14 @@
     cursor: pointer;
     padding: 0 20px;
     @include eXSmall {
-        display: block;
 
-        &.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        &.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        &.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
+        @include hamburgerAnimation;
+        
+    }
+    @include landscapeMobile {
+
+        @include hamburgerAnimation;
+
     }
 
     .bar {

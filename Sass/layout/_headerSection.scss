@@ -2,6 +2,9 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../Assets/Images/header.jpg") no-repeat center center/cover;
     height: 100vh;
+@include eXSmall{
+    height: 105vh;
+}
 @include landscape{
     height: 150vh;
 }
@@ -31,6 +34,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+
     @include tablet {
         flex-direction: column;
         width: 100%;
@@ -55,6 +60,11 @@
         }
         @include landscape {
             width: 50%;
+            text-align: center;
+            padding-bottom: 5vh;
+        }
+        @include landscapeMobile {
+            width: 100%;
             text-align: center;
             padding-bottom: 5vh;
         }
@@ -89,8 +99,11 @@
             @include tablet {
                 text-align: center;
                 width: 100%;
-                text-align: center;
                 padding-left: 20px;
+            }
+            @include landscapeMobile{
+                text-align: center;
+                width: 100%;
             }
  
         }
@@ -158,6 +171,11 @@
             width: 80%;
             margin: 0 auto;
             padding-bottom: 1vh;
+        }
+        @include landscapeMobile {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 3vh;
         }
 
 
