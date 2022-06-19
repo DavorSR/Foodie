@@ -217,6 +217,11 @@
     height: 150vh;
   }
 }
+@media only screen and (min-width: 506px) and (max-width: 740px) and (orientation: landscape) {
+  #header {
+    height: 162vh;
+  }
+}
 
 #booking {
   width: 80%;
@@ -277,6 +282,7 @@
   #booking .text {
     width: 50%;
     text-align: center;
+    padding-top: 10vh;
     padding-bottom: 5vh;
   }
 }
@@ -284,6 +290,7 @@
   #booking .text {
     width: 100%;
     text-align: center;
+    padding-top: 20vh;
     padding-bottom: 5vh;
   }
 }
