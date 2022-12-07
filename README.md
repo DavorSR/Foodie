@@ -1,6 +1,5 @@
-Restaurant design in progress. A live version can be checked on: https://natural-foodie.netlify.app/
+Restaurant design. A live version can be checked on: https://natural-foodie.netlify.app/
 
-Current status:
 
 <strong>Finished:</strong>
 
@@ -10,10 +9,3 @@ Current status:
 4. Created menu and blog post by using JSON file with fetched data and read by Vanilla JS, imported to HTML using inner Html and appendChild.<br>
 5. Social media animations and icons
 6. Meta tags
-
-<strong>To do:</strong>
-
-1. Create order and review page<br>
-2. Blog posts paginations<br>
-4. Order modal<br>
-5. Star rating for blog post<br>
